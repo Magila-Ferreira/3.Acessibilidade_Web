@@ -1,5 +1,28 @@
-/****** DEFININDO A PALETA DE CORES *****/
+/****** ESTRUTURA DO HTML *****/
+.layout {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
 
+.titulo {
+
+}
+
+.grid {
+
+}
+
+.g1 {
+
+}
+
+.autoria {
+
+}
+
+/****** DEFININDO A PALETA DE CORES *****/
 .branco {
     background: #F0F0F0;
 }
