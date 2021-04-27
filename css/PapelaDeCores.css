@@ -10,129 +10,199 @@ html, body {
     font-family: 'Courier New', Courier, monospace;
     grid-template-areas: 
         "titulo"
-        "colors"
+        "grid"
         "autoria";
     grid-template-columns: auto;
-    grid-template-rows: 100px;
-    height: 100%;
+    grid-template-rows: 50px auto 50px;
 }
 
 .titulo {
-    background-image: radial-gradient(#f5f5f5, #dfdfdf, #3f3f3f);
     grid-area: titulo;
-    display: block;
-    text-align: center;
+    background-image: radial-gradient(#f5f5f5, #dfdfdf, #3f3f3f);
+    display: flex;
+    align-items: center;
     padding: 2rem 0;
 }
 
-.colors {
-    grid-area: colors;
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    display: block;
+}
+
+.grid {
+    grid-area: grid;
     background-image: linear-gradient( #dfdfdf, #afafaf, #6f6f6f);
+    height: calc(100vh - 100px);
 }
 
 .caixa {
     align-items: flex-end;
     display: flex;
     justify-content: center;
+    border: 2px solid #afafaf;
 }
 
-.claro {
+.color {
     display: grid;
-    margin: .5rem 0;
-    grid-gap: .5rem;
+    margin: 20px 0;
+    grid-gap: 20px 50px;
     justify-content: center;
-    grid-template-columns: repeat(10, 9.3%);
-    grid-template-rows: 100%;
-    height: 100px;
-}
-
-.escuro {
-    display: grid;
-    margin-bottom: .5rem;
-    grid-gap: .5rem;
-    justify-content: center;
-    grid-template-columns: repeat(10, 9.3%);
-    grid-template-rows: 100%;
-    height: 100px;
-}
-
-.c1 {
-    background: chartreuse;
-    width: 100%;
-}
-
-.c2 {
-    background: cornflowerblue;
-    width: 100%;
-}
-
-.c11 {
-    background:darkolivegreen;
-    width: 100%;
-}
-
-.c12 {
-    background:deeppink;
-    width: 100%;
+    text-align: center;
+    grid-template-columns: repeat(6, 10%);
+    grid-template-rows: repeat(4, 100px);
+    font-weight: bolder;
 }
 
 .autoria {
+    grid-area: autoria;
+    background: #3f3f3f;
+    color: #f5f5f5;
+    font-size: 12px;
+    text-align: center;
+}
 
+h5 {
+    font-family: 'Edwardian Script ITC';
+    font-size: 24px;
 }
 
 /****** DEFININDO A PALETA DE CORES *****/
 .branco {
     background: #f5f5f5;
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 .preto {
     background: #3f3f3f;
-}
-
-.cinza_escuro {
-    background: #6f6f6f;
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 .cinza_claro {
     background-color: #dfdfdf;
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
 }
 
-.cor_de_pele {
-
+.cinza_escuro {
+    background: #6f6f6f;
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
-.cor_de_pele {
-
+.pele_clara {
+    width: 100%;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
 }
 
-.marrom {
-
+.pele_escura {
+    width: 100%;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
 }
 
-.laranja {
-
+.marrom_claro {
+    width: 100%;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
 }
 
-.amarelo {
-
+.marrom_escuro {
+    width: 100%;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
 }
 
-.vermelho {
-
+.laranja_claro {
+    width: 100%;
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
 }
 
-.roxo {
-
+.laranja_escuro {
+    width: 100%;
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
 }
 
-.rosa {
-
+.amarelo_claro {
+    width: 100%;
+    grid-column: 6 / 7;
+    grid-row: 1 / 2;
 }
 
-.azul {
-
+.amarelo_escuro {
+    width: 100%;
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
 }
 
-.verde {
+.vermelho_claro {
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
 
+.vermelho_escuro {
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.roxo_claro {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.roxo_escuro {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+.rosa_claro {
+    width: 100%;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.rosa_escuro {
+    width: 100%;
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+
+.azul_claro {
+    width: 100%;
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+}
+
+.azul_escuro {
+    width: 100%;
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+}
+
+.verde_claro {
+    width: 100%;
+    grid-column: 5 / 6;
+    grid-row: 3 / 4;
+}
+
+.verde_escuro {
+    width: 100%;
+    grid-column: 5 / 6;
+    grid-row: 4 / 5;    
 }
