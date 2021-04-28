@@ -18,7 +18,7 @@ html, body {
 
 .titulo {
     grid-area: titulo;
-    background-image: radial-gradient(#f9f9f9, #cfcfcf, #303030 80%);
+    background-image: radial-gradient(#f9f9f9, #cfcfcf, #191919 90%);
     display: flex;
     align-items: center;
 }
@@ -38,25 +38,13 @@ main {
     height: calc(100vh - 110px);
 }
 
-.caixa_clara, .caixa_escura {
-    align-items: flex-end;
+.color {
+    align-items: top;
     display: flex;
     justify-content: center;
-    border: 2px solid #cfcfcf;
     width: 100%;
-    font-weight: bolder;
-    font-size: 14px;
-}
-
-.caixa_clara {
-    color: #303030;
-}
-
-.caixa_escura {
-    color: #f9f9f9;
-}
-
-.color {
+    font-weight: 600;
+    font-size: 16px;
     display: grid;
     margin: 20px 0;
     grid-gap: 20px 50px;
@@ -64,12 +52,43 @@ main {
     text-align: center;
     grid-template-columns: repeat(6, 10%);
     grid-template-rows: repeat(4, 100px);
-    font-weight: bolder;
+}
+
+.caixa {
+    grid-template-areas: 
+    "card_nome"
+    "card_hexa";
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;    
+}
+
+.card_nome {
+    display: grid;
+    grid-area: card_nome;
+    width: 100%;
+}
+
+.card_hexa {
+    grid-area: card_hexa;
+    width: 100%;
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-color: #505050;
+}
+
+.clara {
+    color: #191919;
+    border: 2px solid #b0b0b0;
+}
+
+.escura {
+    color: #f9f9f9;
+    border: 2px solid #cfcfcf;
 }
 
 .autoria {
     grid-area: autoria;
-    background: #303030;
+    background: #191919;
     color: #f9f9f9;
     font-size: 12px;
     text-align: center;
@@ -91,29 +110,14 @@ h5 {
     grid-area: 1 / 1 / 2 / 2;
 }
 
-.preto {
-    background: #303030;
-    grid-area: 2 / 1 / 3 / 2;
-}
-
 .cinza_claro {
     background-color: #cfcfcf;
     grid-area: 1 / 2 / 2 / 3;
 }
 
-.cinza_escuro {
-    background: #5f5f5f;
-    grid-area: 2 / 2 / 3 / 3;
-}
-
 .pele_clara {
-    background: #e0c0b0;
+    background: #efcfbf;
     grid-area: 1 / 3 / 2 / 4;
-}
-
-.pele_escura {
-    background: #604040;
-    grid-area: 2 / 3 / 3 / 4;
 }
 
 .marrom_claro {
@@ -121,19 +125,9 @@ h5 {
     grid-area: 1 / 4 / 2 / 5;
 }
 
-.marrom_escuro {
-    background: #403020;
-    grid-area: 2 / 4 / 3 / 5;
-}
-
 .laranja_claro {
     background: #efbf8f;
     grid-area: 1 / 5 / 2 / 6;
-}
-
-.laranja_escuro {
-    background-color: #903010;
-    grid-area: 2 / 5 / 3 / 6;
 }
 
 .amarelo_claro {
@@ -141,19 +135,9 @@ h5 {
     grid-area: 1 / 6 / 2 / 7;
 }
 
-.amarelo_escuro {
-    background: #908000;
-    grid-area: 2 / 6 / 3 / 7;
-}
-
 .vermelho_claro {
     background-color: #ff9faf;
     grid-area: 3 / 1 / 4 / 2;
-}
-
-.vermelho_escuro {
-    background: #501010;
-    grid-area: 4 / 1 / 5 / 2;
 }
 
 .roxo_claro {
@@ -161,19 +145,9 @@ h5 {
     grid-area: 3 / 2 / 4 / 3;
 }
 
-.roxo_escuro {
-    background: #600070;
-    grid-area: 4 / 2 / 5 / 3;
-}
-
 .rosa_claro {
     background: #ffafcf;
     grid-area: 3 / 3 / 4 / 4;
-}
-
-.rosa_escuro {
-    background: #904060;
-    grid-area: 4 / 3 / 5 / 4;
 }
 
 .azul_claro {
@@ -181,15 +155,74 @@ h5 {
     grid-area: 3 / 4 / 4 / 5;
 }
 
+.verde_claro {
+    background: #afefaf;
+    grid-area: 3 / 5 / 4 / 6;
+}
+
+.preto {
+    background: #191919;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.cinza_escuro {
+    background: #505050;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+
+
+.pele_escura {
+    background: #604040;
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+
+
+.marrom_escuro {
+    background: #403020;
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+
+
+.laranja_escuro {
+    background-color: #903010;
+    grid-area: 2 / 5 / 3 / 6;
+}
+
+
+.amarelo_escuro {
+    background: #908000;
+    grid-area: 2 / 6 / 3 / 7;
+}
+
+
+
+.vermelho_escuro {
+    background: #501010;
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+
+.roxo_escuro {
+    background: #600070;
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+
+.rosa_escuro {
+    background: #904060;
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+
 .azul_escuro {
     background: #003060;
     grid-area: 4 / 4 / 5 / 5;
 }
 
-.verde_claro {
-    background: #afefaf;
-    grid-area: 3 / 5 / 4 / 6;
-}
+
 
 .verde_escuro {
     background: #004000;
