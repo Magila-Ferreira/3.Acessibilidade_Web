@@ -85,18 +85,18 @@ main {
 }
 
 .clara {
-    color: #191919;
-    border: 2px solid #191919;
+    color: #505050;
+    border: 1px solid #cfcfcf;
 }
 
 .default {
     color: #191919;
-    border: 2px solid #f9f9f9;
+    border: 1px solid #cfcfcf;
 }
 
 .escura {
-    color: #f9f9f9;
-    border: 2px solid #f9f9f9;
+    color: #a0a0a0;
+    border: 1px solid #cfcfcf;
 }
 
 .autoria {
